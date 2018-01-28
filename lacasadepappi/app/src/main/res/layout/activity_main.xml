@@ -23,31 +23,19 @@
         android:layout_width="0dp"
         android:layout_weight="1"
         android:layout_height="140dp"
-<<<<<<< HEAD
         android:backgroundTint="#bfceb1"
-=======
-        android:backgroundTint="#c0cfb2"
->>>>>>> 8f386c41bcae34624250bb5f990f8f3bb7da2e70
     />
     <Button
         android:layout_width="0dp"
         android:layout_weight="1"
         android:layout_height="140dp"
-<<<<<<< HEAD
         android:backgroundTint="#e3e5d8"
-=======
-        android:backgroundTint="#c0cfb2"
->>>>>>> 8f386c41bcae34624250bb5f990f8f3bb7da2e70
         />
     <Button
         android:layout_width="0dp"
         android:layout_weight="1"
         android:layout_height="140dp"
-<<<<<<< HEAD
         android:backgroundTint="#ebece7"
-=======
-        android:backgroundTint="#c0cfb2"
->>>>>>> 8f386c41bcae34624250bb5f990f8f3bb7da2e70
         />
 </LinearLayout>
     <LinearLayout
@@ -58,11 +46,7 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="140dp"
-<<<<<<< HEAD
             android:backgroundTint="#8aa788"
-=======
-            android:backgroundTint="#c0cfb2"
->>>>>>> 8f386c41bcae34624250bb5f990f8f3bb7da2e70
             />
         <Button
             android:layout_width="0dp"
@@ -74,11 +58,7 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="140dp"
-<<<<<<< HEAD
             android:backgroundTint="#e3e5d8"
-=======
-            android:backgroundTint="#c0cfb2"
->>>>>>> 8f386c41bcae34624250bb5f990f8f3bb7da2e70
             />
     </LinearLayout>
     <LinearLayout
@@ -89,21 +69,13 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="140dp"
-<<<<<<< HEAD
             android:backgroundTint="#49654e"
-=======
-            android:backgroundTint="#c0cfb2"
->>>>>>> 8f386c41bcae34624250bb5f990f8f3bb7da2e70
             />
         <Button
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="140dp"
-<<<<<<< HEAD
             android:backgroundTint="#8aa788"
-=======
-            android:backgroundTint="#c0cfb2"
->>>>>>> 8f386c41bcae34624250bb5f990f8f3bb7da2e70
             />
         <Button
             android:layout_width="0dp"
