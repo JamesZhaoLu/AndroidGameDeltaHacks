@@ -139,9 +139,6 @@ public class MainActivity extends AppCompatActivity {
                     timerHandler.removeCallbacks(timerRunnable);
                     b.setText("start");
 
-                    for(int i = 0; i < 9; ++i) {
-                        buttons.get(i).getBackground().setColorFilter(Color.parseColor("#b2cfb5"), PorterDuff.Mode.DARKEN);
-                    }
                 } else {
                     startTime = System.currentTimeMillis();
                     timerHandler.postDelayed(timerRunnable, 0);
