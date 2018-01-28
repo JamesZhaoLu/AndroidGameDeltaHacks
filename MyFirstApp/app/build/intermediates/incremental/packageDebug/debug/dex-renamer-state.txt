@@ -1,0 +1,4 @@
+#Sat Jan 27 20:58:57 EST 2018
+base.0=C\:\\Users\\Darshil Bheda\\Documents\\GitHub\\AndroidGameDeltaHacks\\MyFirstApp\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+path.0=classes.dex
+renamed.0=classes.dex
