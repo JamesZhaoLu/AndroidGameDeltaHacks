@@ -31,10 +31,22 @@ public class MainActivity extends AppCompatActivity {
 
     TextView timerTextView;
     long startTime = 0;
-    ArrayList<Integer> sequence = new ArrayList<Integer>(Arrays.asList(8, 3, 1));
+    ArrayList<Integer> sequence = new ArrayList<Integer>();
     // Create ArrayList of Buttons
     ArrayList<Button> buttons = new ArrayList<Button>();
 
+    // ArrayList of Colours
+    ArrayList<String> coulours = new ArrayList<String>(Arrays.asList("#ffbcbc", "#ffcebc", "#fff0b2", "#e9ffb2",
+            "#c7ffb2", "#b2f7b7", "#b1f7e1", "#b1f7f7", "#b1dbf7", "#b1bbf7", "#cdb1f7", "#eab1f7", "#f7b1f0", "#f7b1d8", "#f7b1b1"));
+
+    //counts number
+    int counter = 0;
+    // Random number
+
+    int prev = 0;
+    // saves previous number
+
+    Random rand =  new Random();
 
 
     //runs without a timer by reposting this handler at the end of the runnable
@@ -52,18 +64,18 @@ public class MainActivity extends AppCompatActivity {
 
             timerHandler.postDelayed(this, 500);
 
-            if (seconds == 2){
-                buttons.get(5).getBackground().setColorFilter(Color.parseColor("#b2b2cf"), PorterDuff.Mode.DARKEN);
-            } else if (seconds == 3){
-                buttons.get(5).getBackground().setColorFilter(Color.parseColor("#b2cfb5"), PorterDuff.Mode.DARKEN);
-            } else if (seconds == 4) {
-                buttons.get(7).getBackground().setColorFilter(Color.parseColor("#b2b2cf"), PorterDuff.Mode.DARKEN);
-            } else if (seconds == 5){
-                buttons.get(7).getBackground().setColorFilter(Color.parseColor("#b2cfb5"), PorterDuff.Mode.DARKEN);
-            } else if (seconds == 6) {
-                 buttons.get(1).getBackground().setColorFilter(Color.parseColor("#b2b2cf"), PorterDuff.Mode.DARKEN);
-            } else if (seconds == 7){
-                buttons.get(1).getBackground().setColorFilter(Color.parseColor("#b2cfb5"), PorterDuff.Mode.DARKEN);
+            // get next int!
+            int n = rand.nextInt(9);
+
+            // put it in the sequence
+
+
+            if (seconds % 2 == 0){
+                sequence.add(n);
+                buttons.get(n).getBackground().setColorFilter(Color.parseColor(coulours.get(counter)), PorterDuff.Mode.DARKEN);
+                if (counter == 14) counter = 0;
+                else counter++;
+                prev = n;
             }
         }
     };
@@ -108,6 +120,10 @@ public class MainActivity extends AppCompatActivity {
                 if (b.getText().equals("stop")) {
                     timerHandler.removeCallbacks(timerRunnable);
                     b.setText("start");
+
+                    for(int i = 0; i < 9; ++i) {
+                        buttons.get(i).getBackground().setColorFilter(Color.parseColor("#b2cfb5"), PorterDuff.Mode.DARKEN);
+                    }
                 } else {
                     startTime = System.currentTimeMillis();
                     timerHandler.postDelayed(timerRunnable, 0);
