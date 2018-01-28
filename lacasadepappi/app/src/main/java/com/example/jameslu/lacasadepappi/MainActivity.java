@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.media.MediaPlayer;
 
 // Java stuff
 import java.util.ArrayList;
@@ -47,6 +48,9 @@ public class MainActivity extends AppCompatActivity {
     // saves previous number
 
     Random rand =  new Random();
+
+    //background music
+    MediaPlayer music;
 
 
     //runs without a timer by reposting this handler at the end of the runnable
@@ -117,6 +121,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Button b = (Button) v;
+                music = MediaPlayer.create(MainActivity.this,R.raw.calmmuisc);
+                music.start();
                 if (b.getText().equals("stop")) {
                     timerHandler.removeCallbacks(timerRunnable);
                     b.setText("start");
