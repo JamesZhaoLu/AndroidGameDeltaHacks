@@ -39,6 +39,10 @@ public class MainActivity extends AppCompatActivity {
     // ArrayList of Colours
     ArrayList<String> coulours = new ArrayList<String>(Arrays.asList("#ffbcbc", "#ffcebc", "#fff0b2", "#e9ffb2",
             "#c7ffb2", "#b2f7b7", "#b1f7e1", "#b1f7f7", "#b1dbf7", "#b1bbf7", "#cdb1f7", "#eab1f7", "#f7b1f0", "#f7b1d8", "#f7b1b1"));
+    ArrayList<String> reds = new ArrayList<String>(Arrays.asList("#bc1a0b", "#e02918", "#ef402f", "#ff5138","#f45942","#ff7f6d","#f49c90","#ffd2cc","#f7e5e3", "#fff5f4"));
+    ArrayList<String> yellows = new ArrayList<String>(Arrays.asList("#f4f0e3", "#ede0b8", "#d8b48a", "#e2ae71", "#eda95a", "#ed9836", "#e58516", "#d18812"));
+    ArrayList<String> greens = new ArrayList<String>(Arrays.asList("#0a9647", "#17aa57", "#28bf69", "#43db85", "#65d897", "#8bedb6", "#a9e8c4", "#d2f7e2", "#e3efe8"));
+    ArrayList<String> purples = new ArrayList<String>(Arrays.asList("#e3e9ef", "#bfd8f2", "#bfbff1", "#c9bef0", "#d9bdef", "#bf93e2", "#a775ce", "#9156bf", "#b856bf", "#bf569f"));
 
     //counts number
     int counter = 0;
@@ -73,11 +77,19 @@ public class MainActivity extends AppCompatActivity {
 
             // put it in the sequence
 
-
             if (seconds % 2 == 0){
+                if (counter < 10)  {
+                    buttons.get(n).getBackground().setColorFilter(Color.parseColor(reds.get(counter)), PorterDuff.Mode.DARKEN);
+                } else if (counter < 18){
+                    buttons.get(n).getBackground().setColorFilter(Color.parseColor(yellows.get(counter - 10)), PorterDuff.Mode.DARKEN);
+                } else if (counter < 27){
+                    buttons.get(n).getBackground().setColorFilter(Color.parseColor(greens.get(counter - 18)), PorterDuff.Mode.DARKEN);
+                } else if (counter < 37) {
+                    buttons.get(n).getBackground().setColorFilter(Color.parseColor(purples.get(counter - 27)), PorterDuff.Mode.DARKEN);
+                }
                 sequence.add(n);
-                buttons.get(n).getBackground().setColorFilter(Color.parseColor(coulours.get(counter)), PorterDuff.Mode.DARKEN);
-                if (counter == 14) counter = 0;
+                // check to redo loop
+                if (counter == 37) counter = 0;
                 else counter++;
                 prev = n;
             }
