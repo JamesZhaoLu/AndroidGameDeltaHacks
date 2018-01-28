@@ -15,7 +15,7 @@
         android:layout_marginTop="50dp"
         android:textSize="20dp"
         android:text = "Hello"
-        android:textColor="@color/colorPrimary"
+        android:textColor="#ffffff"
         android:id="@+id/timerTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
@@ -38,21 +38,21 @@
         android:layout_width="0dp"
         android:layout_weight="1"
         android:layout_height="140dp"
-        android:backgroundTint="#bfceb1"
+        android:backgroundTint="#93090d"
     />
     <Button
         android:id="@+id/button2"
         android:layout_width="0dp"
         android:layout_weight="1"
         android:layout_height="140dp"
-        android:backgroundTint="#e3e5d8"
+        android:backgroundTint="#d30d12"
         />
     <Button
         android:id="@+id/button3"
         android:layout_width="0dp"
         android:layout_weight="1"
         android:layout_height="140dp"
-        android:backgroundTint="#ebece7"
+        android:backgroundTint="#fd1d23"
         />
 </LinearLayout>
     <LinearLayout
@@ -64,21 +64,21 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="140dp"
-            android:backgroundTint="#8aa788"
+            android:backgroundTint="#5c0002"
             />
         <Button
             android:id="@+id/button5"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="140dp"
-            android:backgroundTint="#c0cfb2"
+            android:backgroundTint="#93090d"
             />
         <Button
             android:id="@+id/button6"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="140dp"
-            android:backgroundTint="#e3e5d8"
+            android:backgroundTint="#d30d12"
             />
     </LinearLayout>
     <LinearLayout
@@ -90,21 +90,21 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="140dp"
-            android:backgroundTint="#49654e"
+            android:backgroundTint="#450003"
             />
         <Button
             android:id="@+id/button8"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="140dp"
-            android:backgroundTint="#8aa788"
+            android:backgroundTint="#5c0002"
             />
         <Button
             android:id="@+id/button9"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="140dp"
-            android:backgroundTint="#c0cfb2"
+            android:backgroundTint="#93090d"
             />
     </LinearLayout>
 
