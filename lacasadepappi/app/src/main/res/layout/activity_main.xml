@@ -7,6 +7,7 @@
     >
     <Button
         android:id="@+id/startButton"
+        android:backgroundTint="#efbfbf"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="START!"/>
@@ -14,8 +15,6 @@
     <TextView
         android:layout_marginTop="50dp"
         android:textSize="20dp"
-        android:text = "Hello"
-        android:textColor="#ffffff"
         android:id="@+id/timerTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
