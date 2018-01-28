@@ -13,7 +13,6 @@
     <!-- To see Time -->
     <TextView
         android:layout_marginTop="50dp"
-        android:textSize="20dp"
         android:text = "Hello"
         android:textColor="@color/colorPrimary"
         android:id="@+id/timerTextView"

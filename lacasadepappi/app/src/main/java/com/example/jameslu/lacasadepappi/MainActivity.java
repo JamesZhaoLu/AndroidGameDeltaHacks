@@ -37,8 +37,8 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<Button> buttons = new ArrayList<Button>();
 
     // ArrayList of Colours
-    ArrayList<String> coulours = new ArrayList<String>(Arrays.asList("#ffbcbc", "#ffcebc", "#fff0b2", "#e9ffb2",
-            "#c7ffb2", "#b2f7b7", "#b1f7e1", "#b1f7f7", "#b1dbf7", "#b1bbf7", "#cdb1f7", "#eab1f7", "#f7b1f0", "#f7b1d8", "#f7b1b1"));
+    ArrayList<String> coulours = new ArrayList<String>(Arrays.asList("#ffbcbc", "#ffcebc","#ffddbc", "#ffcebc", "#fff0b2",
+            "#e9ffb2","#c7ffb2", "#b2f7b7", "#b1f7e1", "#b1f7f7", "#b1dbf7", "#b1bbf7", "#cdb1f7", "#eab1f7", "#f7b1f0", "#f7b1d8", "#f7b1b1"));
 
     //counts number
     int counter = 0;
@@ -64,8 +64,6 @@ public class MainActivity extends AppCompatActivity {
             int minutes = seconds / 60;
             seconds = seconds % 60;
 
-            timerTextView.setText(String.format("%d:%02d", minutes, seconds));
-
             timerHandler.postDelayed(this, 500);
 
             // get next int!
@@ -74,10 +72,10 @@ public class MainActivity extends AppCompatActivity {
             // put it in the sequence
 
 
-            if (seconds % 2 == 0){
+            if (seconds % 3 == 0){
                 sequence.add(n);
                 buttons.get(n).getBackground().setColorFilter(Color.parseColor(coulours.get(counter)), PorterDuff.Mode.DARKEN);
-                if (counter == 14) counter = 0;
+                if (counter == 16) counter = 0;
                 else counter++;
                 prev = n;
             }
